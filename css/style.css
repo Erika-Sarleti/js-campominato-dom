@@ -45,7 +45,12 @@ button{
 .selected{
     background-color: blueviolet;
 }
-
+.bomb{
+    background-color: red;
+}
+.no-pointer{
+    pointer-events: none;
+}
 section{
     display: flex;
     align-items: center;
