@@ -12,12 +12,12 @@ let containerBox = document.querySelector('.container');
 play.addEventListener('click', function(){
     let level = selDifficulty.value;
     if (level == 'easy') {
-        alternativeGrid(49);
+        alternativeGrid(100);
     }
      else if (level == 'medium') {
     alternativeGrid(81);    
     } else {
-        alternativeGrid(100);
+        alternativeGrid(49);
     }
 })
 function alternativeGrid(max){
@@ -30,7 +30,11 @@ function alternativeGrid(max){
        square.style.width =`calc(100% / ${lato})`;
        square.style.height = `calc(100% / ${lato})`;
        containerBox.append(square);
+       square.addEventListener('click', changeColor)
     }    
     play.remove();
 }
  
+function changeColor(){
+    this.classList.add('selected');
+}

@@ -42,7 +42,9 @@ button{
     align-items: center;
     border: 1px solid black;
 }
-
+.selected{
+    background-color: blueviolet;
+}
 
 section{
     display: flex;
