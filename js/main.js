@@ -19,7 +19,7 @@ play.addEventListener('click', function(){
         Grid(100);
         randomNum(100);
     }
-     else if (level == 'medium') {
+    else if (level == 'medium') {
         Grid(81); 
         randomNum(81);
     } else {
@@ -28,14 +28,16 @@ play.addEventListener('click', function(){
     }
 })
 function randomNum(max){
-    while (arrRandomNumbers.lenght <= 16){
+    while (arrRandomNumbers.length < 16){
         const randomNumber = Math.floor(Math.random() * (max - 1) + 1);
-        if (!arrRandomNumbers.includes(randomNumber)){
+        if (!(arrRandomNumbers.includes(randomNumber))){
             arrRandomNumbers.push(randomNumber);
         }
     }
-    console.log(arrRandomNumbers);
+    // console.log(arrRandomNumbers);
+    return(arrRandomNumbers);
 }
+
 
 
 
@@ -51,7 +53,7 @@ function Grid(max){
        containerBox.append(square);
        square.addEventListener('click', changeColor)
     }    
-    play.remove();
+    // play.remove();
 }
  
 function changeColor(){
